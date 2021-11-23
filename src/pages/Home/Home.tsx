@@ -51,18 +51,18 @@ class Home extends PureComponent<BasicPageProps, BasicPageStates> {
         <h1 className="mx-auto text-center mb-3">
           Have XO match with Linnil AI!!
         </h1>
-        <div className="mx-auto img-cat-match">
+        <div className="mx-auto img-cat-match mb-3">
           <img src={String(this.catMatchImage.default) } alt="XO match" className="w-100" />
         </div>
-        <Form onSubmit={this.handlerSubmit }>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Your name</Form.Label>
-            <Form.Control type="text" placeholder="Your name" />
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
+        <form onSubmit={this.handlerSubmit }>
+          <Form.Label>Your name</Form.Label>
+          <div className="d-flex">
+            <Form.Control type="text" placeholder="Your name" />&nbsp;&nbsp;
+            <Button variant="primary" type="submit">
+              Play
+            </Button>
+          </div>
+        </form>
       </>
     );
   }
